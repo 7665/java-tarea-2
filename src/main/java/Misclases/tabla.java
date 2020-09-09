@@ -1,21 +1,34 @@
 package Misclases;
+import javax.swing.*;
 
 
-public class factura extends precio{
-  String producto;
-  float precio;
-  public factura(String nuevo_asesor, String nuevo_cliente, String nuevo_producto, float el_precio)
+public class tabla extends variables{
+  public tabla(float numerouno, float numerodos)
   {
-    super(nuevo_asesor, nuevo_cliente);
-    producto = nuevo_producto;
-    precio = el_precio;
+    super(numerouno, numerodos);
+    if(numerouno == numerodos)
+    {
+      JOptionPane.showMessageDialog(null, "Los numeros ingresados son iguales\n que tenga un buen día");
+    }else{
+        if(numerouno > numerodos){
+            JOptionPane.showMessageDialog(null,"[*] La tabla de multiplicación de "+numerouno+" es:");
+            for(int i = 1; i <= 10; i++ )
+            {
+                JOptionPane.showMessageDialog(null,"[*] "+numerouno +" * "+ i +" = "+numerouno*i);
+            }
+            JOptionPane.showMessageDialog(null, "Gracias por su vista tenga un buen día");
+        }else
+        {
+            if(numerodos > numerouno)
+            {
+                JOptionPane.showMessageDialog(null,"[*] La tabla de multiplicación de"+numerodos+" es:");
+                for(int i = 1; i <= 10; i++)
+                {
+                   JOptionPane.showMessageDialog(null, "[*] " + numerodos +" * "+ i +" = "+numerodos*i);
+                }
+                JOptionPane.showMessageDialog(null, "Gracias por su vista tenga un buen día");
+            }   
+        }
+    }
   }
-  public void imprimir_factura()
-  {
-    System.out.println("[*] El nombre del asesor es: "+ asesor);
-    System.out.println("[*] El nombre del cliente es: "+ cliente);
-    System.out.println("[*] El nombre del producto: "+ producto);
-    System.out.println("[*] El precio del producto es: "+ precio);
-
-  }
-} 
+}

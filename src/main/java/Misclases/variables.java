@@ -1,20 +1,14 @@
 package Misclases;
+import javax.swing.*;
 
 
-public class precio {
-  String asesor;
-  String cliente;
+public class variables {
+  float num_uno;
+  float num_dos;
   
-  public precio(String nuevo_asesor, String nuevo_cliente)
+  public variables(float numerouno, float numerodos)
   {
-    asesor = nuevo_asesor;
-    cliente = nuevo_cliente;
+    num_uno = numerouno;
+    num_dos = numerodos;
   }
-  
-  public void imprimir()
-  {
-    System.out.println("Nombre del asesor es: "+asesor);
-    System.out.println("Nombre del cliente es: "+cliente);
-    
-  }
-}
+ }
